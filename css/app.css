@@ -1,0 +1,367 @@
+@font-face {
+    font-family: thewitcher;
+    src: url('../font/thewitcher.ttf.woff') format('woff'), url('../font/thewitcher.ttf.svg#thewitcher') format('svg'), url('../font/thewitcher.ttf.eot'), url('../font/thewitcher.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: #000;
+}
+
+.navbar {
+    background-color: black;
+    position: absolute;
+    width: 0;
+    height: 100vh;
+    transition: all .5s cubic-bezier(.53, .04, .87, .14);
+    z-index: 100;
+}
+
+.navbar__animation {
+    height: 100vh;
+    width: 80vw;
+    animation: openBar .8s ease-in-out
+}
+
+.navbar__container {
+    height: 100vh
+}
+
+.container__button {
+    position: absolute;
+    display: flex;
+    padding: 30px 20px;
+    transition: .5s ease-in-out
+}
+
+.animation__button {
+    transform: translateX(230px);
+    animation: moveButton .5s ease-in-out
+}
+
+.button__icon {
+    color: #fff;
+    background-color: #000;
+}
+
+.icon__bars,
+.icon__bars:after,
+.icon__bars:before {
+    border-radius: 90px;
+    height: 5px;
+    width: 30px;
+    position: absolute;
+    display: block;
+    content: '';
+    background: #fff;
+}
+
+.icon__bars:after {
+    top: -10px;
+}
+
+.icon__bars:before {
+    bottom: -10px
+}
+
+.container__menu {
+    padding-top: 5px;
+    opacity: 0;
+    transition: all .5s;
+    display: none
+}
+
+.animation__menu {
+    display: block;
+    opacity: 1;
+    animation: menuVisibility 1s ease-in-out
+}
+
+.menu__items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.items__link,
+.logo {
+    padding: 5px 30px;
+    margin-top: 20px;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem
+}
+
+header {
+    background-image: url(../img/bg_mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cards {
+    margin-top: 115px;
+}
+
+.card__movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.movie__image img {
+    height: 400px;
+}
+
+.movies__tittle {
+    color: #fff;
+}
+
+.titulo h2 {
+    font-family: "thewitcher";
+    font-size: 3em;
+    color: rgb(236, 233, 233);
+}
+
+.titulo {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+.container__rating {
+    margin-top: 20px;
+}
+
+.rating {
+    color: #ffff66;
+}
+
+.star {
+    color: #fff
+}
+
+.portada {
+    position: relative;
+    color: #fff;
+    height: 100vh;
+    box-shadow: 400px 13px 50px 90px rgba(0, 0, 0, .85) inset;
+}
+
+.info__paragraph {
+    color: #e6e6e6;
+}
+
+.info {
+    margin-top: 20px;
+    font-size: 1rem;
+    width: 300px;
+}
+
+.category__item {
+    color: #f2f2f2;
+    border-right: #f2f2f2 solid 1px;
+    padding: 0 5px;
+    font-size: .8em;
+}
+
+.container__buttons {
+    margin-top: 15px;
+    margin-left: 5px;
+    width: fit-content;
+}
+
+.buttons__item {
+    color: #fff;
+    margin-left: -5px;
+    background-color: #004d66;
+    padding: 10px 25px;
+}
+
+.button__more {
+    background-color: #00bfff;
+}
+
+.search__button {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: -360px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__button--toggle {
+    display: none;
+}
+
+.items__link--rigth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    a {
+        font-size: .7rem
+    }
+    header {
+        background-image: url("../img/bg.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 100vh;
+    }
+    .navbar {
+        width: 100vw;
+        height: 3rem;
+        border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+        background-color: transparent;
+    }
+    .titulo {
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 200px;
+    }
+    .portada {
+        position: relative;
+        color: #fff;
+        height: 100vh;
+        box-shadow: 400px 13px 50px 90px rgba(0, 0, 0, .85) inset;
+    }
+    .info {
+        width: 300px;
+    }
+    .cards {
+        width: 100vw;
+        display: flex;
+        gap: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        top: 86%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.68) 1%, rgba(0, 0, 0, 0.95) 92%, rgba(0, 0, 0, 0.97) 100%);
+        height: max-content;
+        justify-content: center;
+        margin-top: 0;
+    }
+    .card__movie {
+        display: flex;
+        width: 100px;
+        flex-direction: column;
+        align-items: center;
+        transition: .3s;
+        padding: 0;
+    }
+    .card__movie:hover {
+        transform-origin: bottom;
+        transition: .3s;
+        transform: scale(1.5, 1.5);
+    }
+    .movie__image img {
+        object-fit: cover;
+        height: 100px;
+    }
+    .movies__tittle {
+        color: #b9b6b6;
+        font-size: .6em;
+    }
+    .info {
+        width: 400px;
+    }
+    .navbar__container {
+        height: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        margin-left: 100px;
+        font-weight: bold;
+    }
+    .logo {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .container__button {
+        display: none;
+    }
+    .container__menu {
+        display: flex;
+        opacity: 1;
+        align-items: center;
+    }
+    .menu__items {
+        height: auto;
+        flex-direction: row;
+        margin-left: 100px
+    }
+    .items__link {
+        margin-bottom: 20px;
+    }
+    .search__button {
+        top: 15px;
+        right: -280px;
+    }
+    .items__link--rigth {
+        padding: 5px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #00bfff;
+        font-size: .7rem;
+    }
+}
+
+@keyframes openBar {
+    0% {
+        width: 0;
+        height: 0;
+        background-color: rgba(18, 18, 20, .7);
+    }
+    50% {
+        width: 80vw;
+    }
+    100% {
+        height: 100vh;
+        display: block
+    }
+}
+
+@keyframes menuVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveButton {
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(230px)
+    }
+}
