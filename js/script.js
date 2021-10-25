@@ -14,5 +14,5 @@ button.addEventListener("blur", function(event) {
     animation.classList.toggle('navbar__animation');
     navbar__menu.classList.toggle('animation__menu');
     button.classList.toggle('animation__button')
-    button__search.classList.toggle('search__button--toggle')
+    button__search.classList.toggle('search__button')
 }, true);
